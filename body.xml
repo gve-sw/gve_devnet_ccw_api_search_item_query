@@ -1,0 +1,63 @@
+<soapenv:Envelope
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Body>
+        <ngcbod:GetConfiguration
+            xmlns:ngcbod="urn:cisco:b2b:bod:services:1.0"
+            xmlns:oa="http://www.openapplications.org/oagis/9">
+            <oa:ApplicationArea>
+                <oa:Sender>
+                    <oa:LogicalID>121</oa:LogicalID>
+                    <oa:ComponentID>B2B-2.0</oa:ComponentID>
+                    <oa:ReferenceID>Cisco Systems</oa:ReferenceID>
+                    <oa:AuthorizationID>NGC</oa:AuthorizationID>
+                </oa:Sender>
+                <oa:Receiver>
+                    <oa:LogicalID>212</oa:LogicalID>
+                    <oa:ComponentID>B2B</oa:ComponentID>
+                    <oa:ID>Cisco Systems</oa:ID>
+                </oa:Receiver>
+                <oa:CreationDateTime>2012-06-15</oa:CreationDateTime>
+                <oa:BODID schemeAgencyName="Cisco" schemeVersionID="1.0"/>
+            </oa:ApplicationArea>
+            <ngcbod:DataArea>
+                <oa:Get>
+                    <oa:Expression>pattern</oa:Expression>
+                </oa:Get>
+                <ngcbod:Configuration>
+                    <ngcbod:ConfigurationHeader>
+                        <ngcbod:ConfiguredItem>
+                            <oa:Item>
+                                <oa:Classification>
+                                    <oa:CiscoType4OAGI listName="ProductType" listAgencyName="Cisco">any</oa:CiscoType4OAGI>
+                                </oa:Classification>
+                            </oa:Item>
+                            <ngcbod:ProductLeadTime>
+                                <oa:Name>Yes</oa:Name>
+                            </ngcbod:ProductLeadTime>
+                        </ngcbod:ConfiguredItem>
+                        <ngcbod:Properties>
+                            <oa:NameValue name="TAA">Y</oa:NameValue>
+                        </ngcbod:Properties>
+                        <ngcbod:PricingInformation>
+                            <ngcbod:PriceList>
+                                <oa:ID>800030159</oa:ID>
+                                <oa:Description>GLUS</oa:Description>
+                            </ngcbod:PriceList>
+                        </ngcbod:PricingInformation>
+                    </ngcbod:ConfigurationHeader>
+                    <ngcbod:ConfigurationLine>
+                        <ngcbod:ConfiguredItem>
+                            <oa:Item>
+                                <oa:ItemID>
+                                    <oa:ID schemeName="ProductIdentifier" schemeAgencyName="Cisco">CISCO</oa:ID>
+                                </oa:ItemID>
+                            </oa:Item>
+                        </ngcbod:ConfiguredItem>
+                    </ngcbod:ConfigurationLine>
+                </ngcbod:Configuration>
+            </ngcbod:DataArea>
+        </ngcbod:GetConfiguration>
+    </soapenv:Body>
+</soapenv:Envelope>
